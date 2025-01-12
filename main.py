@@ -42,3 +42,7 @@ def add_car(id: int, make: str, model: str, year: int, price: float):
         raise HTTPException(status_code=400, detail="Car with this ID already exists.")
     cars_db.append((id, make, model, year, price))
     return f"Car {make} {model} ({year}) added successfully with ID {id}."
+
+@app.get("/")
+def pornik():
+    return "ok"
